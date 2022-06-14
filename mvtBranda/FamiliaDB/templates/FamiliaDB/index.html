@@ -10,17 +10,47 @@
 
     <h1>Mi Familia</h1>
 
+        <table>
 
-       <p><strong>Parentezco:</strong>{{parentezco}}</p>
-       <p><strong>Nombre:</strong>{{nombre}}</p>
-       <p><strong>Edad:</strong>{{edad}}</p>
-       <p><strong>Nacimiento:</strong>{{nacimiento}}</p>
+            <thead>
+                <td>Parentezco</td>
+                <td>Nombre</td>
+                <td>Edad</td>
+                <td>Nacimiento</td>
+            </thead>
+               
+            {% for familiar in familia %}
 
+            <tr>
+                <td>{{ familiar.parentezco }}</td>
+                <td>{{ familiar.nombre }}</td>
+                <td>{{ familiar.edad }}</td>
+                <td>{{ familiar.nacimiento }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
     
     <h2>Mascotas</h2>
 
-        <p><strong>Especie:</strong>{{especie}}</p>
-        <p><strong>Nombre:</strong>{{nombre_mascota}}</p>
+        <table>
+
+            <thead>
+                <td>Nombre</td>
+                <td>Especie</td>
+            </thead>
+
+            {% for mascota in mascotas %}
+
+            <tr>
+                <td>{{mascota.nombre}}</td>
+                <td>{{mascota.especie}}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
 
 </body>
 </html>
